@@ -108,4 +108,12 @@ class Game {
             // heroHealing() если есть
         } while (true)
     }
+
+    init {
+        generateItems()
+        items.firstOrNull()?.let {
+            hero.addItem(it)
+        }
+    }
+
 }
